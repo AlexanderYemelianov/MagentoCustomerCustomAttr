@@ -1,0 +1,11 @@
+type Customer {
+    hobby: String @doc(description: "The customer's hobby ('Yoga' - 1, 'Traveling' - 2, 'Hiking' - 3).")
+}
+
+input CustomerCreateInput {
+    hobby: String @doc(description: "The customer's hobby ('Yoga' - 1, 'Traveling' - 2, 'Hiking' - 3).")
+}
+
+input CustomerUpdateInput {
+    hobby: String @doc(description: "The customer's hobby ('Yoga' - 1, 'Traveling' - 2, 'Hiking' - 3).")
+}

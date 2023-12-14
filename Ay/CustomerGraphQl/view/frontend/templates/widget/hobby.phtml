@@ -1,0 +1,25 @@
+<?php
+
+/** @var \Ay\CustomerGraphQl\Block\Widget\Hobby $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<div class="field hobby">
+    <label class="label" for="<?= $escaper->escapeHtmlAttr($block->getFieldId('hobby')) ?>">
+        <span><?= $escaper->escapeHtml($block->getStoreLabel('hobby')) ?></span>
+    </label>
+    <div class="control">
+        <select id="<?= $escaper->escapeHtmlAttr($block->getFieldId('hobby')) ?>"
+                name="<?= $escaper->escapeHtmlAttr($block->getFieldName('hobby')) ?>"
+                title="<?= $escaper->escapeHtmlAttr($block->getStoreLabel('hobby')) ?>">
+            <?php $options = $block->getHobbyOptions(); ?>
+            <?php $value = $block->getHobby() ? $block->getHobby()->getValue() : 0; ?>
+            <?php foreach ($options as $option) : ?>
+                <option value="<?= $escaper->escapeHtmlAttr($option->getValue()) ?>"
+                    <?= ($option->getValue() == $value) ? ' selected="selected"' : '' ?>
+                >
+                    <?= $escaper->escapeHtml(__($option->getLabel())) ?>
+                </option>
+            <?php endforeach;?>
+        </select>
+    </div>
+</div>

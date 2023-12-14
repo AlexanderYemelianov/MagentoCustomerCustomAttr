@@ -1,0 +1,25 @@
+{
+    "name": "ay/module-customer-graph-ql",
+    "description": "N/A",
+    "type": "magento2-module",
+    "license": [],
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.4.0||~8.1.0",
+        "magento/framework": "*",
+        "magento/module-authorization": "*",
+        "magento/module-customer": "*",
+        "magento/module-customer-graph-qll": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Ay\\CustomerGraphQl\\": ""
+        }
+    }
+}
+
